@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap"): * {
+  box-sizing: border-box;
+  /* để ko có padding thừa nào trong projects */
+}
+
+body {
+  background-color: #f9fafb;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* display, align, justify luôn đi kèm vs nhau để dàn hàng ngang căn giữa */
+  min-height: 100vh;
+  /* chiều cao bao lấy hết cả trang   */
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.form {
+  padding: 30px 40px;
+}
+/* trên dưới 30. trái phải 40 
+giãn padding bên trong box, khác vs giãn lề margin */
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+/* forn-control là parent của text,label..nên sẽ để relative
+và ptu con trong nó sẽ absolute theo vị trí của cha  */
+
+.form-control label {
+  color: #777;
+  display: block;
+  /*  bắt đầu một dòng mới và kéo dài toàn bộ chiều rộng của màn hình, 
+  giống như cách các phần tử <div> hoạt động */
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  /* để nó cùng hàng vs form-control */
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+/* để mỗi khi chọn label thì sẽ sáng lên */
+
+.form-control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+/* báo lỗi chữ Error message màu đỏ
+ban đầu sẽ ko xuất hiện */
+
+.form button {
+  cursor: pointer;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
